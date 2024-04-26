@@ -145,9 +145,10 @@
 
     <script>
         var map = L.map('map').setView([35.7596, -79.0193], 7); 
-        L.tileLayer('https://tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
-	        attribution: '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | Data from the US Department of Housing and Urban Development | Map by Annika Sink',
-	        minZoom: 8,
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a> | Data from the US Department of Housing and Urban Development | Map by Annika Sink',
+	subdomains: 'abcd',
+	    minZoom: 8,
             maxZoom: 10,
         }).addTo(map);
 
